@@ -1,0 +1,39 @@
+﻿@using LotometroPortal.Entities
+
+@{
+    ViewData["Title"] = "Início";
+
+    string whatsMessage = $"https://wa.me/{UriPathsAndConsts.contactNumber}?text=";
+
+    whatsMessage += $"Olá! Gostaria de tirar algumas dúvidas sobre o Lotômetro";
+
+    bool portalLiberado = true;
+}
+
+<div class="text-center">
+    <p class="display-4">
+        Bem-vindo à plataforma <br />
+        <img src="~/img/lotometro-full-logo.png" />
+    </p>
+
+
+    @*<img src="~/img/" class="my-3 mw-100" />*@
+    <h2 class="mt-3">Como funciona?</h2>
+    <p class="lead">
+        O Lotômetro utiliza algoritmos de inteligência artificial para
+        detectar pessoas em imagens capturadas por câmeras. Com base nessa
+        detecção, é possível contar a quantidade de pessoas em um determinado
+        local em tempo real.
+    </p>
+    <h2 class="mt-3">Quais são as aplicações?</h2>
+    <p class="lead">
+        O Lotômetro pode ser utilizado em diversos locais, como shoppings,
+        estações de transporte público, parques, eventos e muito mais. Com
+        essas informações, é possível tomar decisões estratégicas para
+        melhorar a experiência dos usuários e aumentar a eficiência
+        operacional.
+    </p>
+
+    <a class="btn btn-primary mb-5" asp-area="" asp-controller="Login" asp-action="Index"><i class="fa @IconHelperClass.icon_user"></i> Faça Login ou Cadastre-se </a>
+
+</div>

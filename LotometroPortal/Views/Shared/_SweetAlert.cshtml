@@ -1,0 +1,38 @@
+﻿@using LotometroPortal.Libraries.WebLibrary
+@using LotometroPortal.Entities
+
+@{
+    string msgError = EntitiesHelperClass.GetErrorMessage();
+
+    if (!string.IsNullOrEmpty(msgError))
+    {      
+        <script>
+            sweetFunctions.SweetError('Atenção', '@WebStringFunctions.GetTreatedStringForJavascript(msgError)');
+        </script>
+    }
+    else
+    {
+        string msgInfo = EntitiesHelperClass.GetInfoMessage();
+
+        if (!string.IsNullOrEmpty(msgInfo))
+        {
+            <script>
+                sweetFunctions.SweetInfo('Informação', '@WebStringFunctions.GetTreatedStringForJavascript(msgInfo)');
+            </script>
+        }
+
+        else
+        {
+            string msgSuccess = EntitiesHelperClass.GetSuccessMessage();
+
+            if (!string.IsNullOrEmpty(msgSuccess))
+            {
+                <script>
+                    sweetFunctions.SweetSuccess('Sucesso', '@WebStringFunctions.GetTreatedStringForJavascript(msgSuccess)');
+                </script>
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,42 @@
+﻿@using LotometroPortal.Entities;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@UriPathsAndConsts.portalName - @ViewData["Title"]</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/admin-lte/css/adminlte.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/loading.css" />
+</head>
+<body>
+    <partial name="_LoadingScreen" />
+
+    <div id="box-content">
+
+        <header>
+            <partial name="_Header" />
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <partial name="_PreFooter" />
+        <partial name="_Footer" />
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/loading.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,307 @@
+﻿body {
+}
+
+blockquote {
+    border-left: 0.7rem solid #e69d08;
+}
+
+select[readonly] {
+    background: #eee;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.text-primary {
+    color: #ffb92b !important;
+}
+
+.text-blue {
+    color: #5D68EB !important;
+}
+
+.btn-link-light {
+    font-weight: 400;
+    color: #ffb92b;
+    text-decoration: none;
+}
+
+    .btn-link-light:hover {
+        color: #f6e9d1;
+        text-decoration: none;
+    }
+
+.bg-primary {
+    background-color: #ffb92b !important;
+    color: #000 !important;
+}
+
+.bg-primary-light {
+    background-color: #f6e9d1;
+}
+
+.bg-secondary {
+    background-color: #364045 !important;
+}
+
+.btn-primary {
+    color: #000;
+    background-color: #ffb92b;
+    border-color: #e69d08;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #bd7e00;
+        border-color: #bd7e00;
+    }
+
+.btn-outline-primary {
+    color: #000;
+    background-color: #ffb92b;
+    border-color: #e69d08;
+}
+
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: #bd7e00;
+        border-color: #bd7e00;
+    }
+
+.btn-secondary {
+    color: #364045;
+    background-color: lightgray;
+    border-color: darkgrey;
+}
+
+    .btn-secondary:hover {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+    }
+
+.btn-confirmed {
+    color: #2da445;
+    background-color: white;
+    border-color: #2da445;
+}
+
+    .btn-confirmed:hover {
+    }
+
+.btn-green {
+    color: #000000;
+    background-color: #00b300;
+    border-color: #008000;
+}
+
+.btn-red {
+    color: #000000;
+    background-color: #e60000;
+    border-color: #b32d00;
+}
+
+.btn-blue {
+    color: #000000;
+    background-color: #367ed6;
+    border-color: #2c67b0;
+}
+
+.bg-about-01 {
+    background-image: url("../img/wix/01_image_wix.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-about-02 {
+    background-image: url("../img/wix/08_image_wix.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-smooth-gray {
+    background-color: #f9f9f9;
+}
+
+.bg-smooth-green {
+    background-color: #c0f0e2;
+}
+
+.div-card {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: thin;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 2px;
+    overflow: visible;
+    background: black;
+    border: none;
+}
+
+/*Versão com menos padding do card header*/
+.ch-thiner-pad {
+    padding: 8px 25px 8px 25px;
+}
+
+/*Versão com menos padding do card body*/
+.cb-thiner-pad {
+    padding: 10px 15px 10px 15px;
+}
+
+/*Versão com menos padding do card footer*/
+.cf-thiner-pad {
+    padding: 8px 15px 0px 15px;
+}
+
+/*td centralizado na vertical e horizontal*/
+.td-hv-centered {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*td centralizado na horizontal*/
+.td-h-centered {
+    text-align: center;
+}
+
+/*td centralizado na vertical*/
+.td-v-centered {
+    vertical-align: middle;
+}
+
+.td-pad-10px {
+    padding: 10px;
+}
+
+.tr-centered-vertically {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.table-full-width {
+    position: relative;
+    display: table;
+    margin: 10px auto;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+/*    text-align: center;*/
+}
+.table .thead-primary th {
+    color: #000;
+    background-color: #ffb92b;
+    border-color: #e69d08;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+
+.display-none{
+    display: none;
+}
+
+.aguardando-orcamento-text {
+    font-weight: bold;
+    color: orange;
+}
+
+.sem-resposta-text {
+    font-weight: bold;
+    color: darkgray;
+}
+
+.container-after-login {
+    height: calc(100% - 15px);
+    margin-bottom: 15px;
+}
+
+.fabutton {
+    background: none;
+    padding: 0px;
+    border: none;
+}
+
+.disabled-text {
+    color: dimgrey;
+}
+
+.modal-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    transform: translate(-50%, -50%);
+}
+
+.col-content-centered {
+    /*display: inline-flex;*/
+    float: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.panel-body {
+    background-color: #34495e;
+}
+
+.table-pedidos-header {
+    color: aliceblue;
+    background-color: #3b4ad7;
+}
+
+.table-pedidos-body {
+    background-color: white;
+}
+
+#blanket, #aguarde {
+    position: fixed;
+    display: none;
+}
+
+#blanket {
+    left: 0;
+    top: 0;
+    background-color: #f0f0f0;
+    opacity: 65;
+    height: 100%;
+    width: 100%;
+    /*ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";*/
+    opacity: 0.65;
+    z-index: 9998;
+}
+
+#aguarde {
+    width: auto;
+    height: 30px;
+    top: 40%;
+    left: 45%;
+    background-color: transparent;
+    /*line-height: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;*/
+    z-index: 9999;
+    padding-left: 27px;
+}

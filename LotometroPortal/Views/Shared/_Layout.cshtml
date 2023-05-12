@@ -1,0 +1,76 @@
+﻿@using LotometroPortal.Entities
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@UriPathsAndConsts.portalName</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/lib/admin-lte/css/adminlte.min.css" />
+    <link rel="stylesheet" href="~/css/myStyles.css" />
+    <link rel="stylesheet" href="~/css/loading.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+          integrity="sha512-G0q3Z0pABYdPjC32MVo/GxdEiQmcdyR73zX90jxvjxpt3Zwy3opbD3lBHDv0nLw/PynNzf+bNfxiMrgkkTpNfw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="application/javascript" src="~/js/sweetalert/sweetalert.min.js"></script>
+    <script type="application/javascript" src="~/js/sweet_functions.js"></script>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+
+    <partial name="_LoadingScreen" />
+
+    <div id="box-content">
+        <div class="wrapper">
+
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake" src="~/img/lotometro-full-logo.png" alt="@UriPathsAndConsts.portalName Logo" width="240">
+            </div>
+
+            <partial name="_Header" />
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <partial name="_LeftSideBar" />
+            </aside>
+
+            <partial name="_SweetAlert" />
+
+            <div class="content-wrapper pt-2 pt-md-4 pb-3 pb-md-5 px-2 px-md-5">
+                @RenderBody()
+            </div>
+
+            <footer class="main-footer border-top text-muted bg-gradient-yellow">
+                <partial name="_Footer" />
+            </footer>
+
+
+            <aside class="control-sidebar control-sidebar-dark">
+            </aside>
+        </div>
+    </div>
+
+
+    <script type="application/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script type="application/javascript" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="application/javascript" src="~/js/loading.js"></script>
+    <script type="application/javascript" src="~/js/global.js"></script>
+
+
+    <script type="application/javascript" src="~/js/site.js"></script>
+    <script type="application/javascript" src="~/lib/admin-lte/js/adminlte.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,176 @@
+﻿@using LotometroPortal.Models
+@using LotometroPortal.Entities
+@using LotometroPortal.ViewModels
+
+@model AuthViewModel
+
+<script>
+    var token = @Html.Raw(@Model.Token);
+</script>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <h4>FESA - Laboratório 72</h4>
+
+            <table class="table table-responsive table-striped">
+                <tr>
+                    <th>Local</th>
+                    <th>Descrição</th>
+                    <th>Lotação</th>
+                    <th>Percentual</th>
+                    <th>Ultima atualização</th>
+                    <th>Google Maps</th>
+                </tr>
+                <tr>
+                    <td>FESA</td>
+                    <td>Laboratório 72</td>
+                    <td><label id="qtdPessoasFesa"></label></td>
+                    <td><label id="percentualFesa"></label></td>
+                    <td><label id="dataLeituraFesa"></label></td>
+                    <td><a href="https://www.google.com/maps/place/Centro+Educacional+da+Funda%C3%A7%C3%A3o+Salvador+Arena/@@-23.7377698,-46.5886079,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce414eddd6bbc5:0x201473abf3b97338!8m2!3d-23.7377748!4d-46.5837424!16s%2Fg%2F11g6w1mv26">ver mapa</a></td>
+                </tr>
+            </table>
+
+            <canvas id="myChartFesa"></canvas>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h4>Shopping Plaza - Praça alimentação</h4>
+
+            <table class="table table-responsive table-striped">
+                <tr>
+                    <th>Local</th>
+                    <th>Descrição</th>
+                    <th>Lotação</th>
+                    <th>Percentual</th>
+                    <th>Ultima atualização</th>
+                    <th>Google Maps</th>
+                </tr>
+                <tr>
+                    <td>Shopping Plaza</td>
+                    <td>Praça alimentação</td>
+                    <td>150 pessoas</td>
+                    <td>75%</td>
+                    <td>12/05/2023 11:57:02</td>
+                    <td><a href="https://www.google.com/maps/place/S%C3%A3o+Bernardo+Plaza+Shopping/@@-23.7377242,-46.6066809,14z/data=!4m10!1m2!2m1!1sShopping+Plaza!3m6!1s0x94ce4197050001d9:0x394857fc3eb531f!8m2!3d-23.7232218!4d-46.543195!15sCg5TaG9wcGluZyBQbGF6YVoQIg5zaG9wcGluZyBwbGF6YZIBD3Nob3BwaW5nX2NlbnRlcuABAA!16s%2Fg%2F11b7hgp_v8">ver mapa</a></td>
+                </tr>
+            </table>
+
+            <canvas id="myChartPublico"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+
+            var ctx = document.getElementById("myChartPublico").getContext("2d");
+            var myChartPublico = new Chart(ctx, {
+                type: "doughnut",
+                data: {
+                    labels: ["Ocupado", "Vazio"],
+                    datasets: [
+                        {
+                            label: "Ocupação",
+                            data: [150, (200 - 150)],
+                            backgroundColor: [
+                                "rgba(255, 99, 132, 0.8)",
+                                "rgba(54, 162, 235, 0.8)",
+                                "rgba(255, 206, 86, 0.8)",
+                            ],
+                            borderColor: [
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(54, 162, 235, 1)",
+                                "rgba(255, 206, 86, 1)",
+                            ],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "top",
+                        },
+                        title: {
+                            display: true,
+                            text: "Legenda",
+                        },
+                    },
+                },
+            });
+        </script>
+    </div>
+    <div class="jumbotron">
+
+        <div class="container">
+            <h4>Correios - Recepção</h4>
+
+            <table class="table table-responsive table-striped">
+                <tr>
+                    <th>Local</th>
+                    <th>Descrição</th>
+                    <th>Lotação</th>
+                    <th>Percentual</th>
+                    <th>Ultima atualização</th>
+                    <th>Google Maps</th>
+                </tr>
+                <tr>
+                    <td>Correios</td>
+                    <td>Recepção</td>
+                    <td>10 pessoas</td>
+                    <td>25%</td>
+                    <td>12/05/2023 12:47:39</td>
+                    <td><a href="https://www.google.com/maps/place/Correios/@@-23.7376429,-46.6067667,14z/data=!4m10!1m2!2m1!1sCorreios+S%C3%A3o+bernardo+do+Campo!3m6!1s0x94ce422b0b650c45:0x320a9c19972ba4a5!8m2!3d-23.7068067!4d-46.5524581!15sCh9Db3JyZWlvcyBTw6NvIGJlcm5hcmRvIGRvIENhbXBvIgOIAQGSAQtwb3N0X29mZmljZeABAA!16s%2Fg%2F1tgnbqs1">ver mapa</a></td>
+                </tr>
+            </table>
+
+            <canvas id="myChartPersonalizado"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            var ctx = document
+                .getElementById("myChartPersonalizado")
+                .getContext("2d");
+            var myChartPersonalizado = new Chart(ctx, {
+                type: "doughnut",
+                data: {
+                    labels: ["Ocupado", "Vazio"],
+                    datasets: [
+                        {
+                            label: "Ocupação",
+                            data: [10, (40 - 10)],
+                            backgroundColor: [
+                                "rgba(255, 99, 132, 0.8)",
+                                "rgba(54, 162, 235, 0.8)",
+                                "rgba(255, 206, 86, 0.8)",
+                            ],
+                            borderColor: [
+                                "rgba(255, 99, 132, 1)",
+                                "rgba(54, 162, 235, 1)",
+                                "rgba(255, 206, 86, 1)",
+                            ],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "top",
+                        },
+                        title: {
+                            display: true,
+                            text: "Legenda",
+                        },
+                    },
+                },
+            });
+        </script>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/dashboard.js"></script>
+}

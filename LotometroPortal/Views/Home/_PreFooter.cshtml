@@ -1,0 +1,52 @@
+﻿@using LotometroPortal.Entities
+
+@{
+    string emailContatoMailTo = $"mailto:{UriPathsAndConsts.contactEmail}";
+    string whatsMessage = $"https://wa.me/" + UriPathsAndConsts.contactNumber;
+}
+
+<div class="container-fluid bg-gradient-dark pb-3">
+    <div class="row">
+        <div class="col">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 text-center text-md-left mt-3">
+                        <div class="row">
+                            <div class="col">                                
+                                <img src="~/img/lotometro-full-logo-white.png" height="128" />
+                            </div>
+                        </div>                     
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center text-md-left">
+                        <p class="h6 text-light mt-3">Informações</p>
+
+                        <p class="h6 text-primary">Endereço:</p>
+                        <p class="h6 text-white-50 mt-1">Estr. dos Alvarengas, 4001</p>
+
+                        <p class="h6 text-primary">Telefones:</p>
+                        <p class="h6 text-white-50 mt-1">11 982796515</p>
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-center text-md-right">
+
+                        <p class="h6 text-light mt-3">
+                            Contatos / Redes Sociais:
+                        </p>
+                        <p class="h4">
+                            <a title="Página do Facebook" href="" target="_blank"><i class="fab fa-facebook text-white-50"></i></a>
+                            <a title="Canal do Youtube" href="" target="_blank"><i class="fab fa-youtube text-white-50"></i></a>
+                            <a title="Página do Linkedin" href="" target="_blank"><i class="fab fa-linkedin text-white-50"></i></a>
+                            <a title="Página do Instagram" href="" target="_blank"><i class="fab fa-instagram text-white-50"></i></a>
+                            <a title="E-mail" href="@emailContatoMailTo" target="_blank"><i class="fa fa-solid fa-envelope text-white-50"></i></a>
+                            <a title="WhatsApp" href="@whatsMessage" target="_blank"><i class="@IconHelperClass.icon_whats text-white-50"></i></a>
+                        </p>
+
+                        <p class="h6 text-white-50 mt-1">@DateTime.Now.Year</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

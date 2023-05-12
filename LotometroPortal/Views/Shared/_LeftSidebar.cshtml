@@ -1,0 +1,45 @@
+﻿@using LotometroPortal.Entities
+
+
+
+<!-- Sidebar -->
+
+<nav class="navbar text-center">
+    <a class="navbar-brand" asp-area="" asp-controller="Dashboard" asp-action="Index">
+        <img src="~/img/lotometro-full-logo-white.png" alt="@UriPathsAndConsts.portalName Logo" style="width:80%;">
+    </a>
+</nav>
+
+
+<div class="sidebar px-1">
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+
+            <li class="nav-header">OPÇÕES</li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">
+                    <i class="nav-icon fa-solid fa-home"></i>
+                    <p>Início</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logout" onclick="SweetConfirmationRedirect(event, 'Sair', 'Deseja realmente sair do portal?', 'Sim', 'Não');">
+                    <i class="nav-icon fa-solid fa-circle-exclamation text-yellow"></i>
+                    <p class="text-white">Sair</p>
+                </a>
+            </li>
+
+            <li class="nav-header text-center border-top mt-4">Versão: @DateTime.Now.Year</li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- /.sidebar-menu -->
+</div>

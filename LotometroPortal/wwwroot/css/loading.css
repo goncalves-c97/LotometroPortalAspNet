@@ -1,0 +1,23 @@
+﻿#box-content {
+}
+
+#pre-loading {
+    width: 240px;
+    height: 160px;
+    /*background-image: url("~/img/logo_as_bl_yel.png");*/
+    
+    /*background-image: url("~/img/logo_as_bl_yel.png");*/
+    background-position: center;
+    background-size: contain;
+}
+
+#box-load {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
