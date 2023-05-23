@@ -1,0 +1,36 @@
+﻿@using LotometroPortal.Entities
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@UriPathsAndConsts.portalName - @ViewData["Title"]</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/admin-lte/css/adminlte.min.css" />
+    <link rel="stylesheet" href="~/css/myStyles.css" />
+    <!-- <link rel="stylesheet" href="~/css/tooltip.css" /> -->
+    <!-- Javascript files -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="application/javascript" src="~/js/sweetalert/sweetalert.min.js"></script>
+    <script type="application/javascript" src="~/js/sweet_functions.js"></script>
+    <script type="application/javascript" src="~/js/site.js"></script>    
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/admin-lte/js/adminlte.js"></script>
+</head>
+<body class="m-0 p-0">
+
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

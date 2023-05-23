@@ -4,7 +4,7 @@
 @model LoginInputViewModel
 
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Cadastro";
 }
 
 <partial name="_SweetAlert" />
@@ -12,13 +12,13 @@
     <div class="col">
         <div class="row text-center">
             <div class="col">
-                <p class="h4 text-secondary mb-5">LOGIN PORTAL</p>
+                <p class="h4 text-secondary mb-5">CADASTRO PORTAL</p>
             </div>
         </div>       
 
         <div class="row">
             <div class="col bg-gradient-secondary rounded-lg elevation-3 text-center p-3 mx-2 mx-md-5">
-                <form id="formLogin" asp-controller="Login" asp-action="LoginClick">
+                <form id="formCadastro" asp-controller="Cadastro" asp-action="RegisterClick">
                     <div class="row">
                         <div class="col text-center">
                             <div class="form-group px-0 px-md-5">
@@ -42,29 +42,11 @@
                         </div>
                         <div class="col text-center text-sm-left ">
                             <button type="submit" class="btn btn-primary mt-1" style="width:130px;">
-                                Entrar <i class="fa @IconHelperClass.icon_forward"></i>
+                                Cadastrar <i class="fa @IconHelperClass.icon_forward"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col text-center">
-                            OU
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col text-center">
-                            <a class="btn btn-primary mt-1" style="width:130px;" asp-controller="Cadastro" asp-action="Index"; event.preventDefault();">
-                                <i class="fa @IconHelperClass.icon_user"></i> Cadastre-se
-                            </a>
-                        </div>
-                    </div>
                 </form>
-            </div>
-        </div>
-
-        <div class="row mt-3">
-            <div class="col text-center">
-                <a style="color: blue; text-decoration-line: underline; cursor:pointer;" onclick="sweetFunctions.SweetInDevelopment()">Esqueci a senha</a>
             </div>
         </div>
 

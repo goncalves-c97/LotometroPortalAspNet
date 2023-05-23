@@ -49,5 +49,24 @@ namespace LotometroPortal.Entities
             else
                 return null;
         }
+
+        public static AuthViewModel RegisterIntoApi(LoginInputViewModel registerInput)
+        {
+            HttpResponseMessage response = HttpClientResponse(TipoComando.tcPOST,
+                UriPathsAndConsts.apiRoute,
+                "users/",
+                "register",
+                registerInput,
+                true,
+                string.Empty,
+                60);
+
+            string content = GetContentAsString(response);
+
+            if (response.IsSuccessStatusCode)
+                return JsonConvert.DeserializeObject<AuthViewModel>(content);
+            else
+                throw new Exception(content);
+        }
     }
 }

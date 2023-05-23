@@ -34,6 +34,21 @@ namespace LotometroPortal.Entities
             return true; // AUTENTICAÇÃO OK
         }
 
+        public static async Task<bool> RegisterUser(AuthViewModel authViewModel, Controller controller)
+        {
+            if (authViewModel == null) // NÃO RETORNOU NENHUM USUÁRIO
+            {
+                EntitiesHelperClass.SetErrorMessage(controller, "Falha ao obter dados do usuário!");
+                return false;
+            }
+            else // USUÁRIO RETORNADO COM SUCESSO
+            {
+                return true; // AUTENTICAÇÃO OK
+
+            }
+            
+        }
+
         /// <summary>
         /// Salva os dados do usuário nas variáveis de sessão
         /// </summary>
